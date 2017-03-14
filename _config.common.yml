@@ -1,0 +1,92 @@
+source                   : .tmp/src
+destination              : .tmp/dist
+
+# Site settings
+title: Awaken Ministry
+email: maureen@awakenministry.org
+description: > # this means to ignore newlines until "baseurl:"
+  Awaken Ministry is a monthly outreach currently hosted by various Catholic parishes in the Archdiocese of Detroit, MI.  
+  The basic format of an Awaken experience is three-fold: praise and worship, the preached Gospel, and Eucharistic Adoration.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://awakenministry.org" # the base hostname & protocol for your site
+twitter_username: awakencatholics
+app_id: 222007634870123
+
+last_event: 2017-02-10 21:30:00 -0500
+next_event: 2017-03-24 19:30:00 -0500
+
+april_awaken: Fri Apr 21 2018 19:30:00 GMT-0500
+
+# Build settings
+markdown: kramdown
+
+gems:
+  - jekyll-feed
+  - jekyll-assets
+  - jekyll-sitemap
+  - jemoji
+  - jekyll-seo-tag
+  - jekyll-paginate-v2
+
+  
+lsi: false
+
+kramdown:
+  input: GFM
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - s3_website.yml
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - Capfile
+  - config
+  - Gruntfile.js
+  - log
+  - node_modules
+  - package.json
+  - README
+  - tmp
+
+collections:
+  awaken-nights:
+    output: true
+    permalink: /awaken-nights/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: awaken-nights
+    values:
+      layout: awaken-night-detail
+
+autopages:
+  enabeld: true
+  collections:
+    enabled: true
+    layouts:
+      - awaken-nights.html
+  tags:
+    enabled: true
+    layouts:
+      - autopage_collections_tags.html
+      - awaken-nights.html
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 6
+  permalink: '/:num/'
+  title: ':title | :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2

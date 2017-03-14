@@ -1,0 +1,6 @@
+domain: http://www.awakenministry.org
+
+assets:
+    baseurl: http://www.awakenministry.org/assets/
+
+prod: true

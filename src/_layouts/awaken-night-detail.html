@@ -1,0 +1,160 @@
+---
+layout: base
+---
+
+  <!-- Main Start-->
+  <div id="main"> 
+    <!--Inner Pages Heading Area Start-->
+    <section class="inner-headding">
+      <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.night_description }}</p>
+      </div>
+    </section>
+    <!--Inner Pages Heading Area End--> 
+    
+    <!--Sermon Detail Page Start-->
+    <section class="blog-detail sermon-detail">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 col-sm-7">
+            <div class="sermon-frame">
+              <div style="height:450px;width:100%;">&nbsp;</div>
+              <div class="sermon-detail-row">
+                <ul class="left">
+                  <li><a href="#"><i class="fa fa-user"></i>{{ page.speaker }}</a></li>
+                  <li><a href="#"><i class="fa fa-calendar"></i>{{ page.date | date: "%b %-d, %Y" }}</a></li>
+                  <li><a href="#"><i class="fa fa-book"></i>{{ page.series }}</a></li>
+                  <li><a href="#"><i class="fa fa-comments-o"></i><span class="fb-comments-count" data-href="{{page.url}}"></span></a></li>
+                  <li><a href="#"><div class="fb-like" data-href="{{page.url}}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div></a></li>
+                </ul>
+                <ul class="right">
+                  <!-- <li><a href="#"><i class="fa fa-video-camera"></i></a></li> -->
+                  <li><a href="#"><i class="fa fa-headphones"></i></a></li>
+                  <li><a href="#"><i class="fa fa-file-text-o"></i></a></li>
+                  <li><a href="#"><i class="fa fa-arrow-circle-down"></i></a></li>
+                  <li><a href="#"><i class="fa fa-share-square-o"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <h2>{{page.speaker_title}}</h2>
+            <div id="talk">
+              {{ content }}
+            </div>
+            <div class="comment-box">
+              <h3>Comments</h3>
+              <div class="comments" id="comments">
+                
+              </div>
+            </div>
+          </div>
+          <!--Sidebar Start-->
+          <aside>
+            <div class="col-md-3 col-sm-5">
+              <div class="sidebar"> 
+                <!--Sidebar Search Form Start-->
+                <form action="#" class="sidebar-form">
+                  <input required type="text" placeholder="Search for:" class="sidebar-input">
+                  <button class="sidebar-btn-search" value=""><i class="fa fa-search"></i></button>
+                </form>
+                <!--Sidebar Search Form End--> 
+                
+                <!--Popular Sermons Start-->
+                <div class="popular-sermons">
+                  {% include popular_nights.html %}
+                </div>
+                <!--Popular Sermons End--> 
+                
+                <!--Upcoming Events Start-->
+                <div class="upcoming-events">
+                  <h3>Upcoming Events</h3>
+                  <ul>
+                    <li>
+                      <div class="date-box"> <span class="date">27</span> <span class="mnt">mar</span> </div>
+                      <div class="text-box"> <strong class="title">Duis sed odio sit amet</strong> <a href="#" class="time"><i class="fa fa-clock-o"></i>9:00 am</a> <a href="#" class="location"><i class="fa fa-map-marker"></i>Church of London.</a> </div>
+                    </li>
+                    <li>
+                      <div class="date-box"> <span class="date">30</span> <span class="mnt">mar</span> </div>
+                      <div class="text-box"> <strong class="title">Lorem Ipsum gravida</strong> <a href="#" class="time"><i class="fa fa-clock-o"></i>9:00 am</a> <a href="#" class="location"><i class="fa fa-map-marker"></i>Church of London.</a> </div>
+                    </li>
+                    <li>
+                      <div class="date-box"> <span class="date">02</span> <span class="mnt">apr</span> </div>
+                      <div class="text-box"> <strong class="title">Morbi accumsan ipsum</strong> <a href="#" class="time"><i class="fa fa-clock-o"></i>9:00 am</a> <a href="#" class="location"><i class="fa fa-map-marker"></i>Church of London.</a> </div>
+                    </li>
+                    <li>
+                      <div class="date-box"> <span class="date">16</span> <span class="mnt">apr</span> </div>
+                      <div class="text-box"> <strong class="title">Nam nec tellus a odio</strong> <a href="#" class="time"><i class="fa fa-clock-o"></i>9:00 am</a> <a href="#" class="location"><i class="fa fa-map-marker"></i>Church of London.</a> </div>
+                    </li>
+                  </ul>
+                </div>
+                <!--Upcoming Events End--> 
+                
+                <!--Recent Post Start-->
+                <div class="recent-post">
+                  <h3>Recent Post</h3>
+                  <ul>
+                    <li>
+                      <div class="frame"><a href="#"><img src="images/recent-post-img-1.jpg" alt="img"></a></div>
+                      <div class="text-box"> <strong class="title">Proin condimentum</strong> <strong class="post"><span>Posted on</span>: 27 March, 2014</strong> <a href="#" class="readmore">Read More</a> </div>
+                    </li>
+                    <li>
+                      <div class="frame"><a href="#"><img src="images/recent-post-img-2.jpg" alt="img"></a></div>
+                      <div class="text-box"> <strong class="title">Aenean sollicitudin</strong> <strong class="post"><span>Posted on</span>: 27 March, 2014</strong> <a href="#" class="readmore">Read More</a> </div>
+                    </li>
+                    <li>
+                      <div class="frame"><a href="#"><img src="images/recent-post-img-3.jpg" alt="img"></a></div>
+                      <div class="text-box"> <strong class="title">Duis sed odio sit amet</strong> <strong class="post"><span>Posted on</span>: 27 March, 2014</strong> <a href="#" class="readmore">Read More</a> </div>
+                    </li>
+                    <li>
+                      <div class="frame"><a href="#"><img src="images/recent-post-img-4.jpg" alt="img"></a></div>
+                      <div class="text-box"> <strong class="title">Lorem Ipsum gravida</strong> <strong class="post"><span>Posted on</span>: 27 March, 2014</strong> <a href="#" class="readmore">Read More</a> </div>
+                    </li>
+                  </ul>
+                </div>
+                <!--Recent Post End--> 
+                
+                <!--Sidebar Latest News Start-->
+                <div class="sidebar-latest-news">
+                  <h3>Latest News</h3>
+                  <ul>
+                    <li>
+                      <div class="text-box"> <strong class="title">Lorem Ipsum nibh vel velit auctor</strong> <strong class="post"><span>Posted on</span>: 27 March, 2014</strong>
+                        <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt odio.</p>
+                        <a href="#" class="readmore">Read More</a> </div>
+                    </li>
+                    <li>
+                      <div class="text-box"> <strong class="title">Lorem Ipsum nibh vel velit auctor</strong> <strong class="post"><span>Posted on</span>: 27 March, 2014</strong>
+                        <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt odio.</p>
+                        <a href="#" class="readmore">Read More</a> </div>
+                    </li>
+                    <li>
+                      <div class="text-box"> <strong class="title">Lorem Ipsum nibh vel velit auctor</strong> <strong class="post"><span>Posted on</span>: 27 March, 2014</strong>
+                        <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt odio.</p>
+                        <a href="#" class="readmore">Read More</a> </div>
+                    </li>
+                  </ul>
+                </div>
+                <!--Sidebar Latest News End--> 
+                
+                <!--Tags Box Start-->
+                {% if page.tags %}
+                <div class="tags-box">
+                  <h3>Tags</h3>
+                  <ul>
+                    {% for tag in page.tags %}
+                    <li><a href="{{tag.url}}">{{tag.name}}</a></li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                {% endif %}
+                <!--Tags Box End--> 
+              </div>
+            </div>
+          </aside>
+          <!--Sidebar End--> 
+        </div>
+      </div>
+    </section>
+    <!--Sermon Detail Page End--> 
+  </div>
+  <!-- Main End-->

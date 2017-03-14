@@ -1,0 +1,238 @@
+---
+layout: base
+scripts: [current-countdowns]
+---
+<!-- Main Start-->
+  <div id="main">
+    <!--Inner Pages Heading Area Start-->
+    <section class="inner-headding">
+      <div class="container">
+        <h1>Current Series</h1>
+        <p>The Spring 2017 Awaken Series - Rise &amp; Shine - St. Mary's - Royal Oak, MI</p>
+      </div>
+    </section>
+    <!--Inner Pages Heading Area End-->
+
+    <!--Event Detail Page Page Start-->
+    <section class="blog-detail event-detail">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 col-sm-7">
+            {% for awaken_night in paginator.posts %}
+            {% if awaken_night.tags contains 'Next' %}
+            <div class="fram-holder">
+              <div class="left">
+                <div class="date-box"> <strong class="day">{{awaken_night.date | date: "%A"}}</strong> <strong class="date">{{awaken_night.date | date: "%-d"}}</strong> <strong class="mnt">{{awaken_night.date | date: "%^B"}}</strong> <strong class="year">{{awaken_night.date | date: "%Y"}}</strong> </div>
+                <ul>
+                  <li><a href="#"><i class="fa fa-calendar"></i>{{awaken_night.date | date: "%b %-d, %Y" }}</a></li>
+                  <li><a href="#"><i class="fa fa-clock-o"></i>7:30 pm to 9:30 pm</a></li>
+                  <li><a href="#"><i class="fa fa-microphone"></i>{{awaken_night.speaker}}</a></li>
+                  <li><a href="#"><i class="fa fa-map-marker"></i>{{awaken_night.location}}</a></li>
+                </ul>
+                <a href="#" class="btn-participate">Participate</a> </div>
+              <div class="event-frame"> <a href="#"><img src="/assets/images/event-detail-img.jpg" alt="img"></a>
+                <div class="map-row">
+                  <div class="event-detail-timer"> <strong class="title">Next Event Will Start In:</strong>
+                    <div class="timer-outer">
+                      <div class="defaultCountdown"></div>
+                    </div>
+                  </div>
+                  <div class="map-box">
+                    <div id="map_contact_1" class="map_canvas-2 active"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            <h2>Nullam fermentum neque sed elit pretium, ac dignissim ipsum cursus.</h2>
+            <p>Duis ullamcorper pellentesque nunc at blandit. Maecenas viverra justo at leo sollicitudin volutpat. Praesent id mattis sem. Suspendisse eget nibh luctus, ornare massa commodo, rhoncus nulla. Phasellus ac malesuada lorem. Maecenas id metus aliquam, dignissim nibh fringilla, viverra libero. Donec vitae leo odio. Nunc tristique quam at lobortis lobortis. Nunc viverra eros lobortis mi luctus laoreet. Aliquam ultrices libero at tortor lobortis, vel dictum ipsum varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae urna consequat lacus elementum semper. Sed adipiscing at dolor tempus congue.</p>
+            <p>Vestibulum vehicula dolor sed ante lacinia lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque rutrum felis lorem, in eleifend magna consequat vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie justo enim, id gravida quam sagittis eu. Nullam interdum porta augue, quis consequat nisl. Ut risus diam, accumsan ac elit vel, interdum accumsan lacus. </p>
+            <blockquote> <i class="fa fa-quote-left"></i> <q>Phasellus dolor nibh, lobortis sit amet felis eu, bibendum laoreet risus. Cras tempor mauris non interdum vehicula. Suspendisse purus libero, eleifend vitae tristique vel, suscipit vel sapien. Duis tempor sodales nibh in feugiat. Vivamus aliquam, sapien vitae imperdiet porta, elit dolor condimentum nisl, ac molestie urna elit venenatis quam. Phasellus vel imperdiet nunc.</q> <i class="fa fa-quote-right"></i> </blockquote>
+            <p>Fusce mattis sapien eget tincidunt scelerisque. Nunc posuere vehicula felis, non fringilla nisl ornare nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis adipiscing felis in tristique ultrices. Morbi bibendum imperdiet eros, nec faucibus turpis pulvinar sed. Sed libero arcu, posuere id tempor ac, suscipit quis lorem. Etiam rutrum, ipsum nec cursus fringilla, turpis enim mattis tellus, id molestie magna dui vel sapien. Nam non fermentum ligula. Vivamus hendrerit in orci in egestas. Ut sit amet erat viverra, laoreet odio sed, imperdiet ipsum. Phasellus ac nisi tincidunt, mattis lectus ut, ultricies nisi.</p>
+            <p>Donec a imperdiet risus, at bibendum massa. Praesent vestibulum dui turpis, eu consequat purus lobortis ut. Duis consequat ligula velit. Proin ac iaculis odio. Mauris turpis urna, scelerisque in dignissim scelerisque, elementum et risus. In placerat, purus eget eleifend tempor, metus tortor pretium risus, eu blandit mi velit vel sem.</p>
+            <div class="share-btn"> <a href="#" class="share">Share Event</a> </div>
+            <div class="related-events">
+              <h3>Related Events</h3>
+              <div class="row">
+                {% for awaken_night in paginator.posts %}
+                <div class="col-md-4">
+                  <div class="latest-event-box">
+                    <div class="frame"> <a href="#"><img alt="img" src="/assets/images/related-event-img-3.jpg"></a>
+                      <div class="date"><strong class="dat">{{awaken_night.date | date: '%-d'}}</strong><strong class="mnt">{{awaken_night.date | date: '%b' }}</strong></div>
+                      <div class="caption">
+                        <h4>{{awaken_night.speaker}}</h4>
+                        <div class="text-box">
+                          <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
+                        </div>
+                      </div>
+                      <div class="inner-area">
+                        <div class="timer-box">
+                          <div class="anotherCountdown{{forloop.index}}"></div>
+                        </div>
+                        <div class="text-area"> <strong class="title">Lorem quis bibendum</strong>
+                          <ul>
+                            <li><a href="#"><span><i class="fa fa-user"></i></span><strong>{{awaken_night.speaker}}</strong></a></li>
+                            <li><a href="#"><span><i class="fa fa-calendar"></i></span><strong class="night_date{{forloop.index}}">{{awaken_night.date | date: "%b %-d, %Y" }}</strong></a></li>
+                            <li><a href="#"><span><i class="fa fa-map-marker"></i></span><strong>{{awaken_night.location}}</strong></a></li>
+                          </ul>
+                          <a class="btn-participate" href="#">Participate</a> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            <form action="form.php" method="post" class="comment-form">
+              <h4>Leave a Comment</h4>
+              <ul>
+                <li> <i class="fa fa-user"></i>
+                  <input name="name" required pattern="[a-zA-Z ]+"  type="text" class="comment-input" placeholder="Name">
+                </li>
+                <li> <i class="fa fa-envelope-o"></i>
+                  <input type="text" placeholder="Email" required pattern="^[a-zA-Z0-9-\_.]+@[a-zA-Z0-9-\_.]+\.[a-zA-Z0-9.]{2,5}$" class="comment-input" name="email">
+                </li>
+                <li> <i class="fa fa-link"></i>
+                  <input placeholder="Website" type="text" required class="comment-input" name="website">
+                </li>
+                <li> <i class="fa fa-pencil"></i>
+                  <input placeholder="Subject" type="text" required class="comment-input" name="subject">
+                </li>
+              </ul>
+              <div class="text-area-box"> <i class="fa fa-pencil"></i>
+                <textarea rows="10" cols="10" name="comments" required class="comment-textarea" placeholder="Comments"></textarea>
+                <input type="submit" value="Submit" class="comment-btn-sumbit" name="submit">
+              </div>
+            </form>
+          </div>
+          <!--Sidebar Start-->
+          <aside>
+            <div class="col-md-3 col-sm-5">
+              <div class="sidebar">
+                <!--Sidebar Search Form Start-->
+                <form action="#" class="sidebar-form">
+                  <input required type="text" placeholder="Search for:" class="sidebar-input">
+                  <button class="sidebar-btn-search" value=""><i class="fa fa-search"></i></button>
+                </form>
+                <!--Sidebar Search Form End-->
+
+                <!--Popular Sermons Start-->
+                <div class="popular-sermons">
+                  <h3>Popular Sermons</h3>
+                  <ul>
+                    <li> <a href="#" class="play"><i class="fa fa-play-circle"></i></a>
+                      <div class="text-box"> <strong class="title">Proin gravida nibh vel </strong> <a href="#" class="user"><i class="fa fa-user"></i>John Doe</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>30 March, 2014</a> </div>
+                    </li>
+                    <li> <a href="#" class="play"><i class="fa fa-play-circle"></i></a>
+                      <div class="text-box"> <strong class="title">Lorem Ipsum gravida</strong> <a href="#" class="user"><i class="fa fa-user"></i>John Doe</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>30 March, 2014</a> </div>
+                    </li>
+                    <li> <a href="#" class="play"><i class="fa fa-play-circle"></i></a>
+                      <div class="text-box"> <strong class="title">Aenean sollicitudin</strong> <a href="#" class="user"><i class="fa fa-user"></i>John Doe</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>30 March, 2014</a> </div>
+                    </li>
+                    <li> <a href="#" class="play"><i class="fa fa-play-circle"></i></a>
+                      <div class="text-box"> <strong class="title">Lorem quis bibendum</strong> <a href="#" class="user"><i class="fa fa-user"></i>John Doe</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>30 March, 2014</a> </div>
+                    </li>
+                    <li> <a href="#" class="play"><i class="fa fa-play-circle"></i></a>
+                      <div class="text-box"> <strong class="title">Nec sagittis sem nibh</strong> <a href="#" class="user"><i class="fa fa-user"></i>John Doe</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>30 March, 2014</a> </div>
+                    </li>
+                  </ul>
+                </div>
+                <!--Popular Sermons End-->
+
+                <!--Upcoming Events Start-->
+                <div class="upcoming-events">
+                  <h3>Upcoming Events</h3>
+                  <ul>
+                    <li>
+                      <div class="date-box"> <span class="date">27</span> <span class="mnt">mar</span> </div>
+                      <div class="text-box"> <strong class="title">Duis sed odio sit amet</strong> <a href="#" class="time"><i class="fa fa-clock-o"></i>9:00 am</a> <a href="#" class="location"><i class="fa fa-map-marker"></i>Church of London.</a> </div>
+                    </li>
+                    <li>
+                      <div class="date-box"> <span class="date">30</span> <span class="mnt">mar</span> </div>
+                      <div class="text-box"> <strong class="title">Lorem Ipsum gravida</strong> <a href="#" class="time"><i class="fa fa-clock-o"></i>9:00 am</a> <a href="#" class="location"><i class="fa fa-map-marker"></i>Church of London.</a> </div>
+                    </li>
+                    <li>
+                      <div class="date-box"> <span class="date">02</span> <span class="mnt">apr</span> </div>
+                      <div class="text-box"> <strong class="title">Morbi accumsan ipsum</strong> <a href="#" class="time"><i class="fa fa-clock-o"></i>9:00 am</a> <a href="#" class="location"><i class="fa fa-map-marker"></i>Church of London.</a> </div>
+                    </li>
+                    <li>
+                      <div class="date-box"> <span class="date">16</span> <span class="mnt">apr</span> </div>
+                      <div class="text-box"> <strong class="title">Nam nec tellus a odio</strong> <a href="#" class="time"><i class="fa fa-clock-o"></i>9:00 am</a> <a href="#" class="location"><i class="fa fa-map-marker"></i>Church of London.</a> </div>
+                    </li>
+                  </ul>
+                </div>
+                <!--Upcoming Events End-->
+
+                <!--Recent Post Start-->
+                <div class="recent-post">
+                  <h3>Recent Post</h3>
+                  <ul>
+                    <li>
+                      <div class="frame"><a href="#"><img src="images/recent-post-img-1.jpg" alt="img"></a></div>
+                      <div class="text-box"> <strong class="title">Proin condimentum</strong> <strong class="post"><span>Posted on</span>: 27 March, 2014</strong> <a href="#" class="readmore">Read More</a> </div>
+                    </li>
+                    <li>
+                      <div class="frame"><a href="#"><img src="images/recent-post-img-2.jpg" alt="img"></a></div>
+                      <div class="text-box"> <strong class="title">Aenean sollicitudin</strong> <strong class="post"><span>Posted on</span>: 27 March, 2014</strong> <a href="#" class="readmore">Read More</a> </div>
+                    </li>
+                    <li>
+                      <div class="frame"><a href="#"><img src="images/recent-post-img-3.jpg" alt="img"></a></div>
+                      <div class="text-box"> <strong class="title">Duis sed odio sit amet</strong> <strong class="post"><span>Posted on</span>: 27 March, 2014</strong> <a href="#" class="readmore">Read More</a> </div>
+                    </li>
+                    <li>
+                      <div class="frame"><a href="#"><img src="images/recent-post-img-4.jpg" alt="img"></a></div>
+                      <div class="text-box"> <strong class="title">Lorem Ipsum gravida</strong> <strong class="post"><span>Posted on</span>: 27 March, 2014</strong> <a href="#" class="readmore">Read More</a> </div>
+                    </li>
+                  </ul>
+                </div>
+                <!--Recent Post End-->
+
+                <!--Sidebar Latest News Start-->
+                <div class="sidebar-latest-news">
+                  <h3>Latest News</h3>
+                  <ul>
+                    <li>
+                      <div class="text-box"> <strong class="title">Lorem Ipsum nibh vel velit auctor</strong> <strong class="post"><span>Posted on</span>: 27 March, 2014</strong>
+                        <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt odio.</p>
+                        <a href="#" class="readmore">Read More</a> </div>
+                    </li>
+                    <li>
+                      <div class="text-box"> <strong class="title">Lorem Ipsum nibh vel velit auctor</strong> <strong class="post"><span>Posted on</span>: 27 March, 2014</strong>
+                        <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt odio.</p>
+                        <a href="#" class="readmore">Read More</a> </div>
+                    </li>
+                    <li>
+                      <div class="text-box"> <strong class="title">Lorem Ipsum nibh vel velit auctor</strong> <strong class="post"><span>Posted on</span>: 27 March, 2014</strong>
+                        <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt odio.</p>
+                        <a href="#" class="readmore">Read More</a> </div>
+                    </li>
+                  </ul>
+                </div>
+                <!--Sidebar Latest News End-->
+
+                <!--Categories Box Start-->
+                <div class="categories-box">
+                  <h3>Categories</h3>
+                  <ul>
+                    <li> <a href="#"> <span class="even">Prayer</span> <span class="odd">(10)</span> </a> </li>
+                    <li> <a href="#"> <span class="even">Worship</span> <span class="odd">(10)</span> </a> </li>
+                    <li> <a href="#"> <span class="even">Church</span> <span class="odd">(10)</span> </a> </li>
+                    <li> <a href="#"> <span class="even">Sermons</span> <span class="odd">(10)</span> </a> </li>
+                    <li> <a href="#"> <span class="even">Catholic</span> <span class="odd">(10)</span> </a> </li>
+                    <li> <a href="#"> <span class="even">Blogs</span> <span class="odd">(10)</span> </a> </li>
+                  </ul>
+                </div>
+                <!--Categories Box End-->
+
+              </div>
+            </div>
+          </aside>
+          <!--Sidebar End-->
+        </div>
+      </div>
+    </section>
+    <!--Event Detail Page Page End-->
+  </div>
+  <!-- Main End-->
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>

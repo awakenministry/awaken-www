@@ -1,0 +1,8 @@
+<h3>Popular Awaken Nights</h3>
+<ul>
+{% for night in site.data.popular_nights %}
+  <li> <a href="{{night.url}}" class="play"><i class="fa fa-play-circle"></i></a>
+    <div class="text-box"> <strong class="title">{{night.title}}</strong> <a href="#" class="user"><i class="fa fa-user"></i>{{night.speaker}}</a> <a href="#" class="calendar"><i class="fa fa-calendar"></i>{{night.date}}</a> </div>
+  </li>
+{% endfor %}
+</ul>

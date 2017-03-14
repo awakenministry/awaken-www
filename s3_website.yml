@@ -1,0 +1,43 @@
+<%= File.read('_credentials.yml') %>
+
+max_age:
+  "assets/*": 314496000
+  "*.ico": 2592000
+  "*.html": 604800
+  "*": 604800
+
+gzip: true
+gzip:
+  - .html
+  - .css
+  - .js
+  - .txt
+  - .xml
+  - .ico
+
+cloudfront_distribution_id: ####
+cloudfront_distribution_config:
+  default_cache_behavior:
+    min_TTL: <%= 60 * 60 * 24 %>
+  aliases:
+    quantity: 2
+    items:
+      CNAME0: awakenministries.org
+      CNAME1: www.awakenministries.org
+
+cloudfront_invalidate_root: true
+
+# concurrency_level: 5
+
+# redirects:
+#   index.php: /
+#   about.php: about.html
+#   music-files/promo.mp4: http://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+# routing_rules:
+#   - condition:
+#       key_prefix_equals: blog/some_path
+#     redirect:
+#       host_name: blog.example.com
+#       replace_key_prefix_with: some_new_path/
+#       http_redirect_code: 301

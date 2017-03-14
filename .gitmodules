@@ -1,0 +1,3 @@
+[submodule "/Users/jpipas/Projects/awaken-www/src/assets/audio"]
+	path = /Users/jpipas/Projects/awaken-www/src/assets/audio
+	url = git@github.com:awakenministry/awaken-audio.git
