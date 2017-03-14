@@ -1,6 +1,6 @@
 # [Awaken Ministry](http://www.awakenministry.org) Source Code
 
-This is the source code of Awaken Ministry. Awaken Ministry is a monthly outreach currently hosted by various Catholic parishes in the Archdiocese of Detroit, MI., built with [Jekyll](http://jekyllrb.com) and a starter I call [Skinny Bones](https://github.com/mmistakes/skinny-bones-jekyll).
+This is the source code of Awaken Ministry. Awaken Ministry is a monthly outreach currently hosted by various Catholic parishes in the Archdiocese of Detroit, MI., built with [Jekyll](http://jekyllrb.com).
 
 ### Plugins Used
 
